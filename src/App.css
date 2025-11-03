@@ -1,0 +1,174 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #111, #222);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.app-container {
+  width: 95%;
+  max-width: 1300px;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #ffc107;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+select,
+input {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+button {
+  background-color: #00b33c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #00992f;
+}
+
+.table-container {
+  overflow-x: auto;
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  table-layout: fixed;
+}
+
+th,
+td {
+  border: 1px solid #444;
+  padding: 6px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+th {
+  background-color: #333;
+  color: #ffcc00;
+}
+
+td input {
+  width: 90%;
+  padding: 4px;
+  border-radius: 4px;
+  border: none;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  table {
+    font-size: 0.7rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  select,
+  input,
+  button {
+    font-size: 0.8rem;
+  }
+}
+/* -------------------- Button Styling -------------------- */
+button {
+  background: #28a745;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #218838;
+  transform: scale(1.03);
+}
+
+/* Style for Download Excel Button */
+.download-btn {
+  background: #17a2b8; /* Teal color for distinction */
+  color: white;
+}
+
+.download-btn:hover {
+  background: #138496;
+}
+/* -------------------- Header Styling -------------------- */
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #4cc9f0; /* Cool blue tone */
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(90deg, #4cc9f0, #4361ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Centering the header wrapper */
+.app-container {
+  text-align: center;
+}
+
+/* Stylish underline */
+/* --------- Modern Professional Header --------- */
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px 0;
+  background: linear-gradient(to right, #1e1e1e, #222);
+  border-bottom: 1px solid #333;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: #e0e0e0;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.header p {
+  font-size: 0.9rem;
+  color: #8f8f8f;
+  margin-top: 6px;
+  font-weight: 400;
+}
