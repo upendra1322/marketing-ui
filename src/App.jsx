@@ -70,11 +70,18 @@ function App() {
     setShowData(true);
   };
 
-  // 🟢 Save Button Logic
+  // 🟢 Save Button Logic (Now downloads Excel)
   const handleSave = () => {
     setColleges(editedData);
     setIsSaved(true);
-    alert("✅ Changes saved successfully!");
+
+    // ✅ Export updated data to Excel file
+    const worksheet = XLSX.utils.json_to_sheet(editedData);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, "UpdatedColleges");
+    XLSX.writeFile(workbook, "Updated_Colleges.xlsx");
+
+    alert("✅ Changes saved successfully! Excel file downloaded.");
   };
 
   // 🟢 Warn user before leaving if unsaved changes
@@ -210,17 +217,21 @@ function App() {
                   <td>{college.Management}</td>
                   <td>{college.University}</td>
                   <td>{college.Category}</td>
+
+                  {/* ✅ Fixed Inputs */}
                   <td>
                     <input
                       type="text"
-                      value={college.Email || ""}
-                      onChange={(e) => handleEdit(index, "Email", e.target.value)}
+                      value={editedData[index]?.Email ?? ""}
+                      onChange={(e) =>
+                        handleEdit(index, "Email", e.target.value)
+                      }
                     />
                   </td>
                   <td>
                     <input
                       type="text"
-                      value={college["Phone No"] || ""}
+                      value={editedData[index]?.["Phone No"] ?? ""}
                       onChange={(e) =>
                         handleEdit(index, "Phone No", e.target.value)
                       }
