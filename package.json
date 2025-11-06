@@ -12,6 +12,7 @@
   "dependencies": {
     "file-save": "^0.2.0",
     "file-saver": "^2.0.5",
+    "firebase": "^12.5.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "xlsx": "^0.18.5"
